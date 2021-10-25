@@ -10,14 +10,42 @@
     <div id="grid">
       <ul>
         <li><strong>content</strong></li>
-        <li> <a href="tiger.html">호랑이</font></a> </li>
+        <li> <a href="tiger.html">호랑이</a> </li>
         <li> <a href="owl.html">부엉이</a> </li>
         <li> <a href="parrot.html">앵무새</a> </li>
         <li> <a href="shrimp.html">새우완탕</a> </li>
         <li> <a href="comment.html">댓글 달기</a> </li>
       </ul>
-
      <div>
+       <input  style="margin-top: 10px;" type="button" value="night mode" onclick="
+       var target = document.querySelector('body');
+       var link = document.querySelectorAll('a');
+       var i = 0;
+
+       if(this.value === 'night mode'){
+         target.style.backgroundColor='black';
+         target.style.color='white';
+         document.querySelector('h1').style.borderBottomColor='white';
+         document.querySelector('ul').style.borderRightColor='white';
+
+         for(i=0; i<link.length; i++){
+           link[i].style.color='white';
+         }
+         i=0;
+         this.value = 'day mode';
+       }else{
+         target.style.backgroundColor='white';
+         target.style.color='black';
+         document.querySelector('h1').style.borderBottomColor='black';
+         document.querySelector('ul').style.borderRightColor='black';
+
+         for(i=0; i<link.length; i++){
+           link[i].style.color='black';
+         }
+         i=0;
+         this.value = 'night mode';
+       }
+       ">
        <h2><strong>TIGER</strong>란?</h2>
        <img src="tiger1.jpg" alt="호랑이 사진" width="560" height="315">
        <p>tiger은 호랑이입니다. <u>호랑이</u>는 <h3>무섭습니다!</h3> </p>

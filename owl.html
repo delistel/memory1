@@ -16,8 +16,36 @@
         <li> <a href="shrimp.html">새우완탕</a> </li>
         <li> <a href="comment.html">댓글 달기</a> </li>
       </ul>
-
      <div>
+       <input  style="margin-top: 10px;" type="button" value="night mode" onclick="
+       var target = document.querySelector('body');
+       var link = document.querySelectorAll('a');
+       var i = 0;
+
+       if(this.value === 'night mode'){
+         target.style.backgroundColor='black';
+         target.style.color='white';
+         document.querySelector('h1').style.borderBottomColor='white';
+         document.querySelector('ul').style.borderRightColor='white';
+
+         for(i=0; i<link.length; i++){
+           link[i].style.color='white';
+         }
+         i=0;
+         this.value = 'day mode';
+       }else{
+         target.style.backgroundColor='white';
+         target.style.color='black';
+         document.querySelector('h1').style.borderBottomColor='black';
+         document.querySelector('ul').style.borderRightColor='black';
+
+         for(i=0; i<link.length; i++){
+           link[i].style.color='black';
+         }
+         i=0;
+         this.value = 'night mode';
+       }
+       ">
        <h2><strong>OWL</strong>이란?</h2>
        <img src="owl-3649048.jpg" alt="부엉이 사진" width="560" height="315">
        <p>owl은 부엉이입니다. <u>부엉이</u>는 <h3>멋집니다!</h3>

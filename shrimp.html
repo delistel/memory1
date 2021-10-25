@@ -16,8 +16,36 @@
         <li> <a href="shrimp.html">새우완탕</a> </li>
         <li> <a href="comment.html">댓글 달기</a> </li>
       </ul>
-
      <div>
+       <input  style="margin-top: 10px;" type="button" value="night mode" onclick="
+       var target = document.querySelector('body');
+       var link = document.querySelectorAll('a');
+       var i = 0;
+
+       if(this.value === 'night mode'){
+         target.style.backgroundColor='black';
+         target.style.color='white';
+         document.querySelector('h1').style.borderBottomColor='white';
+         document.querySelector('ul').style.borderRightColor='white';
+
+         for(i=0; i<link.length; i++){
+           link[i].style.color='white';
+         }
+         i=0;
+         this.value = 'day mode';
+       }else{
+         target.style.backgroundColor='white';
+         target.style.color='black';
+         document.querySelector('h1').style.borderBottomColor='black';
+         document.querySelector('ul').style.borderRightColor='black';
+
+         for(i=0; i<link.length; i++){
+           link[i].style.color='black';
+         }
+         i=0;
+         this.value = 'night mode';
+       }
+       ">
        <h2><strong>새우완탕</strong>이란?</h2>
        <img src="shrimp.jpg" alt="새우완탕요리 사진" width="560" height="315">
        <p>새우완탕은 음식입니다. <u>새우완탕</u>은 <h3>츄베릅입니다!</h3>
